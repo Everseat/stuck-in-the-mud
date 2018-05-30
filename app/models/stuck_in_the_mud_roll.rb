@@ -1,5 +1,7 @@
 class StuckInTheMudRoll
 
+  attr_reader :d1, :d2, :d3, :d4, :d5
+
   def initialize(d1, d2, d3, d4, d5)
     @d1, @d2, @d3, @d4, @d5 = d1, d2, d3, d4, d5
   end

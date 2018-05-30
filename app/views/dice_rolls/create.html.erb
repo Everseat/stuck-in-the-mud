@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <h1 class="display-4">You rolled</h1>
+  <ol>
+    <li><%= @roll.d1 %></li>
+    <li><%= @roll.d2 %></li>
+    <li><%= @roll.d3 %></li>
+    <li><%= @roll.d4 %></li>
+    <li><%= @roll.d5 %></li>
+  </ol>
+  <p class="lead">For a score of <%= @roll.score %></p>
+  <% if @roll.end_of_turn? %>
+    <%= link_to "Start over", root_path, class: "btn btn-primary btn-lg" %>
+  <% else %>
+    <%= render partial: "new_roll" %>
+  <% end %>
+</div>
